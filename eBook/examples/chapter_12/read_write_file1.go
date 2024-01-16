@@ -3,18 +3,18 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 )
 
 func main() {
-	inputFile := "products.txt"
-	outputFile := "products_copy.txt"
-	buf, err := ioutil.ReadFile(inputFile)
+	inputFile := "./eBook/examples/chapter_12/products.txt"
+	outputFile := "./eBook/examples/chapter_12/products_copy.txt"
+	buf, err := os.ReadFile(inputFile)
 	if err != nil {
 		panic(err.Error())
 	}
 	fmt.Printf("%s\n", string(buf))
-	err = ioutil.WriteFile(outputFile, buf, 0644) // oct, not hex
+	err = os.WriteFile(outputFile, buf, 0644) // oct, not hex
 	if err != nil {
 		panic(err.Error())
 	}

@@ -3,6 +3,10 @@ package main
 
 import "fmt"
 
+/*
+模拟 关闭数据库链接
+*/
+
 func main() {
 	doDBOperations()
 }

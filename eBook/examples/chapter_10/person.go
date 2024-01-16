@@ -22,6 +22,7 @@ func main() {
 	pers1.lastName = "Woodward"
 	upPerson(&pers1)
 	fmt.Printf("The name of the person is %s %s\n", pers1.firstName, pers1.lastName)
+
 	// 2 - struct as a pointer:
 	pers2 := new(Person)
 	pers2.firstName = "Chris"
@@ -29,6 +30,7 @@ func main() {
 	(*pers2).lastName = "Woodward"
 	upPerson(pers2)
 	fmt.Printf("The name of the person is %s %s\n", pers2.firstName, pers2.lastName)
+
 	// 3 - struct as a literal:
 	pers3 := &Person{"Chris", "Woodward"}
 	upPerson(pers3)

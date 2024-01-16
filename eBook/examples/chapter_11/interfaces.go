@@ -26,6 +26,9 @@ func main() {
 	// or even:
 	// areaIntf := sq1
 	fmt.Printf("The square has area: %f\n", areaIntf.Area())
+	fmt.Printf("%p\n", areaIntf)
+	fmt.Printf("%p\n", sq1)
+	fmt.Printf("%p\n", &areaIntf)
 }
 
 // The square has area: 25.000000

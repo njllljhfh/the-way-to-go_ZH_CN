@@ -21,6 +21,7 @@ func main() {
 		fmt.Println(v)
 	}
 	println()
+
 	res2 := mapFunc(mf, "0", "1", "2", "3", "4", "5")
 	for _, v := range res2 {
 		fmt.Println(v)

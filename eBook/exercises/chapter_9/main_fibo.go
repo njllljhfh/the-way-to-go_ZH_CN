@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./fibo/fibo"
+	"./fibo"
 	"fmt"
 )
 

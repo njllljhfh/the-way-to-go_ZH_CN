@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	var arr1 [6]int
-	var slice1 []int = arr1[2:5] // index 5 niet meegerekend!
+	var slice1 []int = arr1[2:5] // item at index 5 not included!
 
 	// load the array with integers: 0,1,2,3,4,5
 	for i := 0; i < len(arr1); i++ {
@@ -29,5 +29,5 @@ func main() {
 	fmt.Printf("The capacity of slice1 is %d\n", cap(slice1))
 
 	// grow the slice beyond capacity:
-	// slice1 = slice1[0:7 ] // panic: runtime error: slice bounds out of range
+	//slice1 = slice1[0:7] // panic: runtime error: slice bounds out of range
 }

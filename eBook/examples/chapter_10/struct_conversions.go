@@ -5,6 +5,10 @@ import (
 	"fmt"
 )
 
+/*
+示例 10.3：
+*/
+
 type number struct {
 	f float32
 }

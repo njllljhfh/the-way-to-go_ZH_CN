@@ -2,6 +2,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"strconv"
 )
@@ -44,7 +45,13 @@ func print(args ...interface{}) {
 }
 
 func main() {
+	//print(&Day(1), "was", &Celsius(18.36)) // 直接取地址报错
 	print(Day(1), "was", Celsius(18.36)) // Tuesday was 18.4 °C
+	fmt.Println()
+
+	d := Day(1)
+	c := Celsius(18.36)
+	print(&d, "was", &c) // Tuesday was 18.4 °C
 }
 
 // Tuesday was 18.4 °C

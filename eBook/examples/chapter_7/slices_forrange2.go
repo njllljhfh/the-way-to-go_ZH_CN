@@ -8,11 +8,13 @@ func main() {
 	for ix, season := range seasons {
 		fmt.Printf("Season %d is: %s\n", ix, season)
 	}
+	fmt.Println("-----------------------------------------------------")
 
 	var season string
 	for _, season = range seasons {
 		fmt.Printf("%s\n", season)
 	}
+	fmt.Println("-----------------------------------------------------")
 
 	for ix := range seasons {
 		fmt.Printf("%d ", ix)

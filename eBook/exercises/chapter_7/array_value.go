@@ -9,7 +9,7 @@ func main() {
 		arr1[i] = i * 2
 	}
 
-	arr2 := arr1
+	arr2 := arr1 // 当数组赋值时，发生了数组内存拷贝。
 	arr2[2] = 100
 
 	for i := 0; i < len(arr1); i++ {

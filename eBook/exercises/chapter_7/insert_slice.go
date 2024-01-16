@@ -5,6 +5,12 @@ import (
 	"fmt"
 )
 
+/*
+练习 7.11
+
+写一个函数 InsertStringSlice 将切片插入到另一个切片的指定位置。
+*/
+
 func main() {
 	s := []string{"M", "N", "O", "P", "Q", "R"}
 	in := []string{"A", "B", "C"}

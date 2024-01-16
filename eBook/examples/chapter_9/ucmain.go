@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./uc/uc"
+	"./uppercase/uc"
 	"fmt"
 )
 

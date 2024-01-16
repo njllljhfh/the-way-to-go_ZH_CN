@@ -1,5 +1,9 @@
 package main
 
+/*
+练习 6.9 不使用递归但使用闭包改写第 6.6 节中的斐波那契数列程序。
+*/
+
 // fib returns a function that returns
 // successive Fibonacci numbers.
 func fib() func() int {

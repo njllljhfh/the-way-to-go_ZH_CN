@@ -8,8 +8,11 @@ type employee struct {
 	salary float32
 }
 
-/* a method which will add a specified percent to an
-   employees salary */
+/*
+a method which will add a specified percent to an
+
+	employees salary
+*/
 func (this *employee) giveRaise(pct float32) {
 	this.salary += this.salary * pct
 }

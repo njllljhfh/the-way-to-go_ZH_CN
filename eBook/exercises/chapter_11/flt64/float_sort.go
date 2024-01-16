@@ -1,4 +1,4 @@
-package float64
+package flt64
 
 import (
 	"fmt"
@@ -43,7 +43,7 @@ func NewFloat64Array() Float64Array {
 }
 
 func (p Float64Array) Fill(n int) {
-	rand.Seed(int64(time.Now().Nanosecond()))
+	rand.NewSource(int64(time.Now().Nanosecond()))
 	for i := 0; i < n; i++ {
 		p[i] = 100 * (rand.Float64())
 	}

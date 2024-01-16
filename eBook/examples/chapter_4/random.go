@@ -11,13 +11,17 @@ func main() {
 		a := rand.Int()
 		fmt.Printf("%d / ", a)
 	}
+	fmt.Printf("\n--------------------------------------------------\n")
+
 	for i := 0; i < 5; i++ {
 		r := rand.Intn(8)
 		fmt.Printf("%d / ", r)
 	}
-	fmt.Println()
-	timens := int64(time.Now().Nanosecond())
-	rand.Seed(timens)
+	fmt.Printf("\n--------------------------------------------------\n")
+
+	timens := int64(time.Now().Nanosecond()) // 时间-纳秒
+	//rand.Seed(timens) //提示弃用了
+	rand.NewSource(timens)
 	for i := 0; i < 10; i++ {
 		fmt.Printf("%2.2f / ", 100*rand.Float32())
 	}

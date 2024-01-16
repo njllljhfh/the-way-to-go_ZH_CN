@@ -2,9 +2,15 @@
 package main
 
 import (
-	"./stack/stack"
+	"./stack"
 	"fmt"
 )
+
+/*
+练习 10.17
+从练习 10.16 开始（它基于结构体实现了一个栈结构），
+为栈的实现（stack_struct.go）创建一个单独的包 stack，并从 main 包 main.stack.go 中调用它。
+*/
 
 func main() {
 	st1 := new(stack.Stack)

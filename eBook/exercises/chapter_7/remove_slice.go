@@ -5,6 +5,12 @@ import (
 	"fmt"
 )
 
+/*
+练习 7.12
+
+写一个函数 RemoveStringSlice 将从 start 到 end 索引的元素从切片 中移除。
+*/
+
 func main() {
 	s := []string{"M", "N", "O", "P", "Q", "R"}
 	res := RemoveStringSlice(s, 2, 4)

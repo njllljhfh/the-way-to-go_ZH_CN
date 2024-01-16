@@ -8,6 +8,10 @@ import (
 func main() {
 	result := 0
 	start := time.Now()
+	//defer func(st time.Time) {
+	//	delta := time.Now().Sub(st)
+	//	fmt.Printf("longCalculation took this amount of time: %s\n", delta)
+	//}(time.Now())
 	for i := 0; i <= 25; i++ {
 		result = fibonacci(i)
 		fmt.Printf("fibonacci(%d) is: %d\n", i, result)

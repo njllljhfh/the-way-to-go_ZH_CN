@@ -3,6 +3,10 @@ package main
 
 import "fmt"
 
+/*
+10.6.7 多重继承
+*/
+
 type Camera struct{}
 
 func (c *Camera) TakeAPicture() string {

@@ -8,18 +8,20 @@ import (
 )
 
 var (
-	barVal = map[string]int{"alpha": 34, "bravo": 56, "charlie": 23, "delta": 87,
+	barVal85 = map[string]int{"alpha": 34, "bravo": 56, "charlie": 23, "delta": 87,
 		"echo": 56, "foxtrot": 12, "golf": 34, "hotel": 16, "indio": 87, "juliet": 65, "kilo": 43, "lima": 98}
 )
 
 func main() {
 	fmt.Println("unsorted:")
-	for k, v := range barVal {
+	for k, v := range barVal85 {
 		fmt.Printf("Key: %v, Value: %v / ", k, v)
 	}
-	keys := make([]string, len(barVal))
+	fmt.Println("\n-----------------------------------------------------")
+
+	keys := make([]string, len(barVal85))
 	i := 0
-	for k := range barVal {
+	for k := range barVal85 {
 		keys[i] = k
 		i++
 	}
@@ -27,7 +29,7 @@ func main() {
 	fmt.Println()
 	fmt.Println("sorted:")
 	for _, k := range keys {
-		fmt.Printf("Key: %v, Value: %v / ", k, barVal[k])
+		fmt.Printf("Key: %v, Value: %v / ", k, barVal85[k])
 	}
 }
 

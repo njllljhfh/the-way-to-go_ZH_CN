@@ -29,7 +29,7 @@ func main() {
 	// iterate through the fields of the struct:
 	for i := 0; i < value.NumField(); i++ {
 		fmt.Printf("Field %d: %v\n", i, value.Field(i))
-		// error: panic: reflect.Value.SetString using value obtained using unexported field
+		//error: panic: reflect.Value.SetString using value obtained using unexported field
 		//value.Field(i).SetString("C#")
 	}
 

@@ -4,7 +4,7 @@
 package main
 
 import (
-	"./stack/stack"
+	"./stack"
 	"bufio"
 	"fmt"
 	"os"
@@ -22,7 +22,7 @@ func main() {
 			os.Exit(1)
 		}
 		token = token[0 : len(token)-2] // remove "\r\n"
-		// fmt.Printf("--%s--\n",token)  // debug statement
+		//fmt.Printf("--%s--\n", token)   // debug statement
 		switch {
 		case token == "q": // stop als invoer = "q"
 			fmt.Println("Calculator stopped")
@@ -31,23 +31,21 @@ func main() {
 			i, _ := strconv.Atoi(token)
 			calc1.Push(i)
 		case token == "+":
-			q, _ := calc1.Pop()
-			p, _ := calc1.Pop()
-			fmt.Printf("The result of %d %s %d = %d\n", p, token, q, p.(int)+q.(int))
+			q := calc1.Pop()
+			p := calc1.Pop()
+			fmt.Printf("The result of %d %s %d = %d\n", p, token, q, p+q)
 		case token == "-":
-			q, _ := calc1.Pop()
-			p, _ := calc1.Pop()
-			fmt.Printf("The result of %d %s %d = %d\n", p, token, q, p.(int)-q.(int))
-
+			q := calc1.Pop()
+			p := calc1.Pop()
+			fmt.Printf("The result of %d %s %d = %d\n", p, token, q, p-q)
 		case token == "*":
-			q, _ := calc1.Pop()
-			p, _ := calc1.Pop()
-			fmt.Printf("The result of %d %s %d = %d\n", p, token, q, p.(int)*q.(int))
-
+			q := calc1.Pop()
+			p := calc1.Pop()
+			fmt.Printf("The result of %d %s %d = %d\n", p, token, q, p*q)
 		case token == "/":
-			q, _ := calc1.Pop()
-			p, _ := calc1.Pop()
-			fmt.Printf("The result of %d %s %d = %d\n", p, token, q, p.(int)/q.(int))
+			q := calc1.Pop()
+			p := calc1.Pop()
+			fmt.Printf("The result of %d %s %d = %d\n", p, token, q, p/q)
 		default:
 			fmt.Println("No valid input")
 		}

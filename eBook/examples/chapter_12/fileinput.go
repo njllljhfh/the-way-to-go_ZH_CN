@@ -13,14 +13,20 @@ func main() {
 	// var inputReader *bufio.Reader
 	// var inputString string
 
-	inputFile, inputError := os.Open("input.dat")
+	inputFile, inputError := os.Open("./eBook/examples/chapter_12/input.dat")
 	if inputError != nil {
 		fmt.Printf("An error occurred on opening the inputfile\n" +
 			"Does the file exist?\n" +
 			"Have you got access to it?\n")
+		fmt.Printf("inputError: %v\n", inputError)
 		return // exit the function on error
 	}
-	defer inputFile.Close()
+
+	defer func() {
+		if err := inputFile.Close(); err != nil {
+			fmt.Println("Error closing file:", err)
+		}
+	}()
 
 	inputReader := bufio.NewReader(inputFile)
 
@@ -29,6 +35,6 @@ func main() {
 		fmt.Printf("The input was: %s", inputString)
 		if readerError == io.EOF {
 			return // error or EOF
-		}	
+		}
 	}
 }

@@ -5,13 +5,21 @@ import (
 	"fmt"
 )
 
-var Days = map[int]string{1: "monday",
+/*
+练习 8.1
+
+创建一个 map 来保存每周 7 天的名字，将它们打印出来并且测试是否存在 Tuesday 和 Hollyday。
+*/
+
+var Days = map[int]string{
+	1: "monday",
 	2: "tuesday",
 	3: "wednesday",
 	4: "thursday",
 	5: "friday",
 	6: "saturday",
-	7: "sunday"}
+	7: "sunday",
+}
 
 func main() {
 	fmt.Println(Days)

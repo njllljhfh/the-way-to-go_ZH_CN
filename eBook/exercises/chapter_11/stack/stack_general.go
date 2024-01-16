@@ -1,7 +1,10 @@
 // stack.go
 package stack
 
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
 type Stack []interface{}
 
@@ -22,6 +25,7 @@ func (stack *Stack) Push(e interface{}) {
 }
 
 func (stack Stack) Top() (interface{}, error) {
+	fmt.Printf("Top 内 stack的地址：%p\n", &stack)
 	if len(stack) == 0 {
 		return nil, errors.New("stack is empty")
 	}

@@ -14,7 +14,7 @@ func main() {
 	var result uint64 = 0
 	start := time.Now()
 	for i := 0; i < LIM; i++ {
-		result = fibonacci(i)
+		result = fibonacci610(i)
 		fmt.Printf("fibonacci(%d) is: %d\n", i, result)
 	}
 	end := time.Now()
@@ -22,7 +22,7 @@ func main() {
 	fmt.Printf("longCalculation took this amount of time: %s\n", delta)
 }
 
-func fibonacci(n int) (res uint64) {
+func fibonacci610(n int) (res uint64) {
 	// memoization: check if fibonacci(n) is already known in array:
 	if fibs[n] != 0 {
 		res = fibs[n]
@@ -31,7 +31,7 @@ func fibonacci(n int) (res uint64) {
 	if n <= 1 {
 		res = 1
 	} else {
-		res = fibonacci(n-1) + fibonacci(n-2)
+		res = fibonacci610(n-1) + fibonacci610(n-2)
 	}
 	fibs[n] = res
 	return

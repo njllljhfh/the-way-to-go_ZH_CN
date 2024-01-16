@@ -2,8 +2,8 @@
 package main
 
 import (
+	"../uc"
 	"fmt"
-	"uppercase/uc"
 )
 
 func main() {

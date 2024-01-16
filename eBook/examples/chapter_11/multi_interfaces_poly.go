@@ -1,4 +1,4 @@
-//multi_interfaces_poly.go
+// multi_interfaces_poly.go
 package main
 
 import "fmt"
@@ -38,12 +38,15 @@ func (r Rectangle) Rank() int {
 func main() {
 	r := Rectangle{5, 3} // Area() of Rectangle needs a value
 	q := &Square{5}      // Area() of Square needs a pointer
+
 	shapes := []Shaper{r, q}
 	fmt.Println("Looping through shapes for area ...")
 	for n := range shapes {
 		fmt.Println("Shape details: ", shapes[n])
 		fmt.Println("Area of this shape is: ", shapes[n].Area())
 	}
+	fmt.Println("-------------------------------------")
+
 	topgen := []TopologicalGenus{r, q}
 	fmt.Println("Looping through topgen for rank ...")
 	for n := range topgen {

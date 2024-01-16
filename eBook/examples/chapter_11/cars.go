@@ -27,13 +27,27 @@ func main() {
 	})
 	fmt.Println("AllCars: ", allCars)
 	fmt.Println("New BMWs: ", allNewBMWs)
+	fmt.Println("-----------------------------------------------")
 	//
 	manufacturers := []string{"Ford", "Aston Martin", "Land Rover", "BMW", "Jaguar"}
 	sortedAppender, sortedCars := MakeSortedAppender(manufacturers)
 	allCars.Process(sortedAppender)
 	fmt.Println("Map sortedCars: ", sortedCars)
+	fmt.Println("-----------------------------------------------")
+
 	BMWCount := len(sortedCars["BMW"])
 	fmt.Println("We have ", BMWCount, " BMWs")
+	fmt.Println("-----------------------------------------------")
+
+	//测试映射
+	res := allCars.Map(func(car *Car) Any {
+		if car.Manufacturer == "BMW" {
+			return "宝马"
+		} else {
+			return "其他品牌"
+		}
+	})
+	fmt.Printf("map res = %v\n", res)
 }
 
 // Process all cars with the given function f:
@@ -57,7 +71,8 @@ func (cs Cars) FindAll(f func(car *Car) bool) Cars {
 
 // Process cars and create new data.
 func (cs Cars) Map(f func(car *Car) Any) []Any {
-	result := make([]Any, 0)
+	//result := make([]Any, 0)
+	result := make([]Any, len(cs))
 	ix := 0
 	cs.Process(func(c *Car) {
 		result[ix] = f(c)

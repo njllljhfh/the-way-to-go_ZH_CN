@@ -2,21 +2,21 @@ package main
 
 import "fmt"
 
-func trace(s string)   { fmt.Println("entering:", s) }
-func untrace(s string) { fmt.Println("leaving:", s) }
+func trace641(s string)   { fmt.Println("entering:", s) }
+func untrace641(s string) { fmt.Println("leaving:", s) }
 
-func a() {
-	trace("a")
-	defer untrace("a")
+func a641() {
+	trace641("a")
+	defer untrace641("a")
 	fmt.Println("in a")
 }
 
-func b() {
-	trace("b")
-	defer untrace("b")
+func b641() {
+	trace641("b")
+	defer untrace641("b")
 	fmt.Println("in b")
-	a()
+	a641()
 }
 func main() {
-	b()
+	b641()
 }

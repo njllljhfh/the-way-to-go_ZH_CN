@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	file, err := os.Open("products2.txt")
+	file, err := os.Open("./eBook/examples/chapter_12/products2.txt")
 	if err != nil {
 		panic(err)
 	}
@@ -19,6 +19,7 @@ func main() {
 	for {
 		var v1, v2, v3 string
 		_, err := fmt.Fscanln(file, &v1, &v2, &v3)
+		//if err != nil {
 		if err != nil {
 			break
 		}

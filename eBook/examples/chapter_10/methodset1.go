@@ -19,5 +19,5 @@ func main() {
 	// A pointer value
 	plst := new(List)
 	plst.Append(2)
-	fmt.Printf("%v (len: %d)\n", plst, lst.Len()) // &[2] (len: 1)
+	fmt.Printf("%v (len: %d)\n", plst, plst.Len()) // &[2] (len: 1)
 }

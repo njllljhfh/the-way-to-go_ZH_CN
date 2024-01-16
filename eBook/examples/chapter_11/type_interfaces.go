@@ -19,6 +19,7 @@ type Shaper interface {
 
 func main() {
 	var areaIntf Shaper
+	fmt.Printf("%v\n", areaIntf)
 	sq1 := new(Square)
 	sq1.side = 5
 

@@ -4,10 +4,10 @@ package main
 import "fmt"
 
 const (
-	WIDTH  = 1920
-	HEIGHT = 1080
-	// WIDTH =	5
-	// HEIGHT = 4
+	//WIDTH  = 1920
+	//HEIGHT = 1080
+	WIDTH  = 5
+	HEIGHT = 4
 )
 
 type pixel int

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	printInts()
+	printInts() // 变长参数可以不传递
 	println()
 	printInts(2, 3)
 	println()

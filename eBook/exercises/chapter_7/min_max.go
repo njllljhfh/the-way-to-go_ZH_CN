@@ -6,6 +6,11 @@ import (
 	"math"
 )
 
+/*
+练习 7.8
+写一个 minSlice 方法，传入一个 int 的切片并且返回最小值，再写一个 maxSlice 方法返回最大值。
+*/
+
 func main() {
 	sl1 := []int{78, 34, 643, 12, 90, 492, 13, 2}
 	max := maxSlice(sl1)

@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+/*
+练习 7.9
+
+给定一个slices []int 和一个 int 类型的因子factor，扩展 s 使其长度为 len(s) * factor。
+*/
+
 var s []int
 
 func main() {

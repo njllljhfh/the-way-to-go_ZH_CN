@@ -13,6 +13,7 @@ func main() {
 
 func fibarray(term int) []int {
 	farr := make([]int, term)
+	fmt.Printf("farr 的类型：%T\n", farr)
 	farr[0], farr[1] = 1, 1
 
 	for i := 2; i < term; i++ {

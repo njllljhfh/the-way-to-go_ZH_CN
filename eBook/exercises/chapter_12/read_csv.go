@@ -19,7 +19,7 @@ type Book struct {
 
 func main() {
 	bks := make([]Book, 1)
-	file, err := os.Open("products.txt")
+	file, err := os.Open("./eBook/exercises/chapter_12/products.txt")
 	if err != nil {
 		log.Fatalf("Error %s opening file products.txt: ", err)
 	}
@@ -30,6 +30,9 @@ func main() {
 		// read one line from the file:
 		line, err := reader.ReadString('\n')
 		readErr := err
+		if readErr == io.EOF {
+			break
+		}
 		// remove \r and \n so 2(in Windows, in Linux only \n, so 1):
 		line = string(line[:len(line)-2])
 		//fmt.Printf("The input was: -%s-", line)
@@ -50,9 +53,6 @@ func main() {
 			bks[0] = *book
 		} else {
 			bks = append(bks, *book)
-		}
-		if readErr == io.EOF {
-			break
 		}
 	}
 	fmt.Println("We have read the following books from the file: ")

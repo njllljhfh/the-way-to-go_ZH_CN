@@ -24,7 +24,7 @@ func (l *Log) Add(s string) {
 }
 
 func (c *Customer) String() string {
-	return c.Name + "\nLog:" + fmt.Sprintln(c.Log)
+	return c.Name + "\nLog:" + fmt.Sprintln(c.Log.String())
 }
 
 func (l *Log) String() string {

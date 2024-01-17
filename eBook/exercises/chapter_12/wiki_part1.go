@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 )
 
 type Page struct {
@@ -12,12 +12,13 @@ type Page struct {
 }
 
 func (this *Page) save() (err error) {
-	return ioutil.WriteFile(this.Title, this.Body, 0666)
+	filePath := "./eBook/exercises/chapter_12/" + this.Title
+	return os.WriteFile(filePath, this.Body, 0666)
 }
 
 func (this *Page) load(title string) (err error) {
-	this.Title = title
-	this.Body, err = ioutil.ReadFile(this.Title)
+	filePath := "./eBook/exercises/chapter_12/" + title
+	this.Body, err = os.ReadFile(filePath)
 	return err
 }
 

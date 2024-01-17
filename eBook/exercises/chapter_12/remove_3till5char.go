@@ -9,8 +9,9 @@ import (
 )
 
 func main() {
-	inputFile, _ := os.Open("goprogram")
-	outputFile, _ := os.OpenFile("goprogramT", os.O_WRONLY|os.O_CREATE, 0666)
+	filePath := "eBook/exercises/chapter_12/"
+	inputFile, _ := os.Open(filePath + "goprogram")
+	outputFile, _ := os.OpenFile(filePath+"goprogramT", os.O_WRONLY|os.O_CREATE, 0666)
 	defer inputFile.Close()
 	defer outputFile.Close()
 	inputReader := bufio.NewReader(inputFile)
@@ -29,7 +30,7 @@ func main() {
 		} else if len(inputString) < 5 {
 			outputString = string([]byte(inputString)[2:len(inputString)]) + "\r\n"
 		} else {
-        		outputString = string([]byte(inputString)[2:5]) + "\r\n"
+			outputString = string([]byte(inputString)[2:5]) + "\r\n"
 		}
 		//fmt.Printf("The output was: --%s--", outputString)
 		_, err := outputWriter.WriteString(outputString)

@@ -27,8 +27,10 @@ func main() {
 				// ...
 			}
 		case xml.EndElement:
-			fmt.Println("End of token")
+			name := token.Name.Local
+			fmt.Printf("End of token - %s\n", name)
 		case xml.CharData:
+			//Chardata 中的内容只是一个 []byte，通过字符串转换让其变得可读性强一些。
 			content := string([]byte(token))
 			fmt.Printf("This is the content: %v\n", content)
 			// ...

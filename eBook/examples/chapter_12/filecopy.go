@@ -8,7 +8,10 @@ import (
 )
 
 func main() {
-	CopyFile("target.txt", "source.txt")
+	n, _ := CopyFile(
+		"./eBook/examples/chapter_12/target.txt",
+		"./eBook/examples/chapter_12/source.txt")
+	fmt.Printf("n=%v\n", n)
 	fmt.Println("Copy done!")
 }
 

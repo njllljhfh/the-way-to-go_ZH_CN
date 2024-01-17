@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-	fName := "MyFile.gz"
+	fName := "./eBook/examples/chapter_12/MyFile.gz"
 	var r *bufio.Reader
-	fi, err := os.Open(fName)
+	fi, err := os.Open(fName) // Open内部以只读模式 调用了OpenFile
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%v, Can't open %s: error: %s\n", os.Args[0], fName,
 			err)
@@ -22,6 +22,7 @@ func main() {
 	if err != nil {
 		r = bufio.NewReader(fi)
 	} else {
+		fmt.Println("else")
 		r = bufio.NewReader(fz)
 	}
 

@@ -27,7 +27,7 @@ var vc VCard
 
 func main() {
 	// using a decoder:
-	file, _ := os.Open("vcard.gob")
+	file, _ := os.Open("eBook/exercises/chapter_12/vcard.gob")
 	defer file.Close()
 	inReader := bufio.NewReader(file)
 	dec := gob.NewDecoder(inReader)

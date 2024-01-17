@@ -6,6 +6,11 @@ import (
 	"os"
 )
 
+/*
+切换到chapter_12,执行以下命令
+go run cat2.go .\input.dat
+*/
+
 func cat(f *os.File) {
 	const NBUF = 512
 	var buf [NBUF]byte

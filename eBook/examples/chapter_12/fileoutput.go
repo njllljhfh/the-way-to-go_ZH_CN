@@ -11,7 +11,7 @@ func main() {
 	// var outputFile *os.File
 	// var outputError os.Error
 	// var outputString string
-	outputFile, outputError := os.OpenFile("output.dat", os.O_WRONLY|os.O_CREATE, 0666)
+	outputFile, outputError := os.OpenFile("./eBook/examples/chapter_12/output.dat", os.O_WRONLY|os.O_CREATE, 0666)
 	if outputError != nil {
 		fmt.Printf("An error occurred with file opening or creation\n")
 		return

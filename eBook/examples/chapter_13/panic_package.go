@@ -2,7 +2,7 @@
 package main
 
 import (
-	"./parse/parse"
+	"./parse"
 	"fmt"
 )
 

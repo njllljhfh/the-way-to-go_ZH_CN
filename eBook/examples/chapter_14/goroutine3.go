@@ -25,6 +25,12 @@ func getData(ch chan string) {
 		}
 		fmt.Printf("%s ", input)
 	}
+
+	//使用 for-range 语句来读取通道是更好的办法，因为这会自动检测通道是否关闭
+	//for input := range ch {
+	//	fmt.Printf("%s ", input)
+	//
+	//}
 }
 
 // Washington Tripoli London Beijing Tokio

@@ -11,6 +11,7 @@ func main() {
 func f() {
 	defer func() {
 		if r := recover(); r != nil {
+			//fmt.Printf("%T, r=%[1]v\n", r)
 			fmt.Println("Recovered in f", r)
 		}
 	}()

@@ -19,7 +19,7 @@ func (e *ParseError) String() string {
 	return fmt.Sprintf("pkg parse: error parsing %q as int", e.Word)
 }
 
-// Parse parses the space-separated words in in put as integers.
+// Parse parses the space-separated words in input as integers.
 func Parse(input string) (numbers []int, err error) {
 	defer func() {
 		if r := recover(); r != nil {

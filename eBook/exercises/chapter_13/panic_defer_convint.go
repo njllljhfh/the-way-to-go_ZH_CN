@@ -14,6 +14,7 @@ func main() {
 		fmt.Printf("%d converted to an int32 is %d", l, i)
 	}
 	fmt.Println()
+
 	l = int64(math.MaxInt32 + 15000)
 	if i, err := IntFromInt64(l); err != nil {
 		fmt.Printf("The conversion of %d to an int32 resulted in an error: %s", l, err.Error())
